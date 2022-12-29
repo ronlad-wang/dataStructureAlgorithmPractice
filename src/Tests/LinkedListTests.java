@@ -11,7 +11,7 @@ public class LinkedListTests {
             test.addFirst(i);
         }
         test.printList();
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < 3; i++) {
             assert test.getFirst() == 4 - i;
             test.removeFirst();
         }
@@ -22,7 +22,7 @@ public class LinkedListTests {
             test.addLast(i);
         }
         test.printList();
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < 3; i++) {
             assert test.getLast() == 4-i;
             test.removeLast();
         }
