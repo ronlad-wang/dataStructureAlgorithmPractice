@@ -1,3 +1,7 @@
+package DataStructures;
+
+import java.util.ArrayList;
+
 public class LinkedList <T> {
     //Singly Linked List implementation with null node at the front
 
@@ -83,5 +87,19 @@ public class LinkedList <T> {
             System.out.print(temp.item);
             temp = temp.next;
         }
+        System.out.print("\n");
+    }
+
+    public ArrayList getArray() {
+        ArrayList copy = new ArrayList(size);
+        if(size == 0) {
+            return copy;
+        }
+        Node counter = firstNode.next;
+        for(int i = 0; i < size; i++) {
+            copy.add(counter.item);
+            counter = counter.next;
+        }
+        return copy;
     }
 }
