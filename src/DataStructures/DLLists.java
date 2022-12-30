@@ -1,10 +1,19 @@
 package DataStructures;
 
 public class DLLists<T> {
+    /*
+    Another way to implement linked lists where each node connects to both the next and previous
+    nodes, which enables us to remove the last node in constant time
+     */
+
     public int size;
+
+    //two sentinel nodes, one for the front and one for the end
     public Node firstNode = new Node(null);
     public Node lastNode = new Node(null, firstNode, null);
+    
     public class Node {
+        //note the prev Node, which allows us to connect backwards from the ending sentinel node
         public T item;
         public Node next;
         public Node prev;
@@ -29,6 +38,7 @@ public class DLLists<T> {
     }
     public void removeFirst() {
         if(size != 0) {
+            //key difference with SLList is we also need to update the .prev for next Node
             firstNode.next.next.prev = firstNode;
             firstNode.next = firstNode.next.next;
             size--;
