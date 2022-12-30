@@ -96,7 +96,7 @@ public class LinkedList <T> {
         }
         Node temp = firstNode.next;
         for(int i = 0; i < size; i++) {
-            System.out.print(temp.item);
+            System.out.print(temp.item + " ");
             temp = temp.next;
         }
         System.out.print("\n");

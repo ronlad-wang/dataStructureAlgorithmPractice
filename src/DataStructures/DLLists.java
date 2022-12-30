@@ -35,7 +35,7 @@ public class DLLists<T> {
         }
     }
     public void addFirst(T input) {
-        Node temp = new Node(firstNode.next.next, firstNode, input);
+        Node temp = new Node(firstNode.next, firstNode, input);
         firstNode.next.prev = temp;
         firstNode.next = temp;
         size++;
@@ -58,5 +58,17 @@ public class DLLists<T> {
     }
     public int getSize() {
         return size;
+    }
+
+    public void printList() {
+        if(size == 0) {
+            System.out.println("Empty List");
+        }
+        Node temp = firstNode.next;
+        for(int i = 0; i < size; i++) {
+            System.out.print(temp.item + " ");
+            temp = temp.next;
+        }
+        System.out.print("\n");
     }
 }
