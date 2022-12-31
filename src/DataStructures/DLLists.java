@@ -11,7 +11,7 @@ public class DLLists<T> {
     //two sentinel nodes, one for the front and one for the end
     public Node firstNode = new Node(null);
     public Node lastNode = new Node(null, firstNode, null);
-    
+
     public class Node {
         //note the prev Node, which allows us to connect backwards from the ending sentinel node
         public T item;
