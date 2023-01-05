@@ -54,6 +54,7 @@ public class Queue<T> {
         QueueNode temp = first;
         while(temp != null) {
             System.out.print(temp.getItem() + " ");
+            temp = temp.getNext();
         }
         System.out.println();
     }
