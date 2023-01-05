@@ -52,6 +52,7 @@ public class Stack<T> {
 
     public void printStack() {
         StackNode temp = top;
+        System.out.println("top -> bottom");
         while(temp != null) {
             System.out.print(temp.getItem() + " ");
             temp = temp.getUnder();
