@@ -1,6 +1,5 @@
 package DataStructures;
 
-import java.util.ArrayList;
 
 public class LinkedList <T> {
     //Singly Linked List implementation
